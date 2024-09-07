@@ -34,12 +34,25 @@ def main():
 
     record_path = st.text_input('Enter the path to the directory where the files are located', './data/mit-bih-arrhythmia-database')
 
+    # Check if the required files are present
+    files_present = [os.path.basename(file)[:-4] for file in glob.glob(f'{record_path}/*.dat')]
+    
+    if len(files_present) == 0:
+        st.warning(f'Records were not found in the specified path: {record_path}.')
+        
+        # Add a button to download the records
+        if st.button('Download MIT-BIH Arrhythmia Database'):
+            with st.spinner('Downloading database... Please do not press the button again.'):
+                # Download all records
+                download_all_records(record_path)
+                st.success('Download complete! The database has been saved to the specified directory, please reload the page.')
+        st.stop()
+
     # Get the list of record IDs
     list_records = [os.path.basename(file)[:-4] for file in glob.glob(f'{record_path}/*.dat')]
 
     if len(list_records) == 0:
-        st.warning(f'Records were not found in the specified path: {record_path}, ' +
-                   'please enter the correct path for the files.')
+        st.warning(f'No records were found in the specified path: {record_path}. Please ensure the path is correct and contains the necessary files.')
         st.stop()
 
     record_id = st.selectbox('Select a record:', list_records)
