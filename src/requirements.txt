@@ -1,0 +1,4 @@
+wfdb
+streamlit
+pandas
+plotly
