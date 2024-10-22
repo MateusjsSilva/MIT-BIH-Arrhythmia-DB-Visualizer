@@ -7,6 +7,19 @@ This project provides a visualizer for the **MIT-BIH Arrhythmia Database**, allo
 - **ECG Signal Visualization**: View ECG signals with annotations from the MIT-BIH Arrhythmia Database.
 - **Interactive Graphs**: Display signal traces, annotation distribution (bar chart, pie chart), and time-series signals with annotation markers.
 - **Detailed Statistics**: Analyze the number and types of annotations, including beat and non-beat annotations.
+- **Download the Database**: [Download the MIT-BIH Arrhythmia Database](https://physionet.org/physiobank/database/mitdb/) to access the ECG signals and annotations.
+
+## Screenshots
+
+- **Download to a folder**
+<div align="center">
+  <img src="docs/img/dowload.png" alt="dowload" height="400em">
+</div>
+
+- **ECG Signal Visualization**
+<div align="center">
+  <img src="docs/img/demo5.png" alt="demo5" height="400em">
+</div>
 
 ## Getting Started
 
