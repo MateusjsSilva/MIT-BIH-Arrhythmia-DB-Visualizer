@@ -32,7 +32,7 @@ Ensure that Python 3.7+ is installed on your system. You will also need to insta
 1. Clone the repository:
     ```sh
     git clone git@github.com:MateusjsSilva/MIT-BIH-Arrhythmia-DB-Visualizer.git
-    cd MIT-BIH-Arrhythmia-DB-Visualizer\src\
+    cd MIT-BIH-Arrhythmia-DB-Visualizer
     ```
 
 2. **Create a virtual environment**:
@@ -62,7 +62,7 @@ Ensure that Python 3.7+ is installed on your system. You will also need to insta
 
 2. **Launch the Streamlit application**:
     ```sh
-    streamlit run visualizer.py
+    streamlit run .\src\visualizer.py
     ```
 
 3. You will be prompted to enter the path where your MIT-BIH files are located and then select a record to visualize.
